@@ -40,6 +40,15 @@
         "version": "1.52.35"
       },
       "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "OVLY_S4",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "OVLY - S4 1809"
     }
   ],
   "sendWelcomeFileRedirect": true

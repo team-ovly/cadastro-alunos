@@ -15,13 +15,11 @@
 						</f:content>
 					</f:SimpleForm>
 					<SearchField placeholder="{i18n>searchfield_placeholder}"/>
-					<List mode="Delete" delete="onDelete">
+					<List mode="Delete" delete="onDelete" items="{/Students}">
 						<items>
-							<StandardListItem title="Aluno A" description="AAA" info="10" icon="sap-icon://notes"/>
-							<StandardListItem title="Aluno B" description="BBB" info="20" icon="sap-icon://notes"/>
-							<StandardListItem title="Aluno C" description="CCC" info="30" icon="sap-icon://notes"/>
+							<StandardListItem title="{FirstName}" description="{LastName}" info="{Id}" icon="sap-icon://notes"/>
 						</items>
-					</List >
+					</List>
 				</content>
 				<footer>
 					<Bar>
