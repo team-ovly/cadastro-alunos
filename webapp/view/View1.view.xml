@@ -1,10 +1,25 @@
 <mvc:View controllerName="ovly.fiori_79.cadastroalunos.controller.View1" xmlns:mvc="sap.ui.core.mvc"
-	xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m">
+	xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns:core="sap.ui.core" xmlns:ndc="sap.ndc" xmlns="sap.m">
 	<App id="idAppControl">
 		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
-			</Page>
+			<Page title="Cadastro de Alunos" showNavButton="true">
+				<content>
+					<Title text="Dados básicos"/>
+					<Label text="Nome"/>
+					<Input value="Fabio"/>
+					<ndc:BarcodeScannerButton/>
+				</content>
+				<footer>
+					<Bar>
+						<contentLeft>
+							<Button text="Atualizar" type="Emphasized" icon="sap-icon://edit"/>
+						</contentLeft>
+						<contentRight>
+							<Button text="Inserir" type="Accept" icon="sap-icon://add"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page >
 		</pages>
 	</App>
 </mvc:View>
