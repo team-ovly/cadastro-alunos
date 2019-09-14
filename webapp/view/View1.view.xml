@@ -9,28 +9,28 @@
 						singleContainerFullSize="false">
 						<f:content>
 							<Label text="Nome"/>
-							<Input value="Fabio"/>
+							<Input id="first_name" value="Fabio"/>
 							<Label text="Sobrenome"/>
-							<Input value="Pagoti"/>
+							<Input id="last_name" value="Pagoti"/>
 						</f:content>
 					</f:SimpleForm>
 					<SearchField placeholder="{i18n>searchfield_placeholder}"/>
-					<List mode="Delete"  >
+					<List mode="Delete" delete="onDelete">
 						<items>
 							<StandardListItem title="Aluno A" description="AAA" info="10" icon="sap-icon://notes"/>
 							<StandardListItem title="Aluno B" description="BBB" info="20" icon="sap-icon://notes"/>
 							<StandardListItem title="Aluno C" description="CCC" info="30" icon="sap-icon://notes"/>
 						</items>
-					</List>
+					</List >
 				</content>
 				<footer>
 					<Bar>
-						<contentLeft>
-							<Button text="Atualizar" type="Emphasized" icon="sap-icon://edit"/>
-						</contentLeft>
 						<contentRight>
-							<Button text="Inserir" type="Accept" icon="sap-icon://add"/>
+							<Button text="Inserir" type="Accept" icon="sap-icon://add" press="onCreate"/>
 						</contentRight>
+						<contentLeft>
+							<Button text="Atualizar" type="Emphasized" icon="sap-icon://edit" press="onEdit"/>
+						</contentLeft>
 					</Bar>
 				</footer>
 			</Page >
