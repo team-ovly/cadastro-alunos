@@ -38,7 +38,10 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": ["sap_hcb", "sap_belize"]
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
 	},
 	"sap.ui5": {
 		"rootView": {
@@ -69,7 +72,7 @@
 				"settings": {
 					"defaultOperationMode": "Server",
 					"defaultBindingMode": "OneWay",
-					"defaultCountMode": "Request",
+					"defaultCountMode": "None",
 					"useBatch": false
 				},
 				"dataSource": "ZT37_79_OVLY_APP_SRV",
@@ -77,9 +80,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -91,11 +96,15 @@
 				"controlId": "idAppControl",
 				"clearControlAggregation": false
 			},
-			"routes": [{
-				"name": "RouteView1",
-				"pattern": "RouteView1",
-				"target": ["TargetView1"]
-			}],
+			"routes": [
+				{
+					"name": "RouteView1",
+					"pattern": "RouteView1",
+					"target": [
+						"TargetView1"
+					]
+				}
+			],
 			"targets": {
 				"TargetView1": {
 					"viewType": "XML",
@@ -105,5 +114,9 @@
 				}
 			}
 		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zt37_79_ovlyapp/webapp",
+		"_version": "1.1.0"
 	}
 }

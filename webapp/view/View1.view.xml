@@ -15,9 +15,10 @@
 						</f:content>
 					</f:SimpleForm>
 					<SearchField placeholder="{i18n>searchfield_placeholder}"/>
-					<List mode="Delete" delete="onDelete" items="{/Students}">
+					<List mode="Delete" growing="true" growingScrollToLoad="true" growingThreshold="10" delete="onDelete" 
+						items="{/Students}">
 						<items>
-							<StandardListItem title="{FirstName}" description="{LastName}" info="{Id}" icon="sap-icon://notes"/>
+							<StandardListItem title="{FirstName}" description="{LastName}" icon="sap-icon://notes"/>
 						</items>
 					</List>
 				</content>
