@@ -12,13 +12,23 @@
 							<Input id="first_name" value="Fabio"/>
 							<Label text="Sobrenome"/>
 							<Input id="last_name" value="Pagoti"/>
+							<Label text="Usuário"/>
+							<Input id="user_name" value=""/>
+							<Label text="Nascimento"/>
+							<DatePicker id="birth_date" />
+							<Label text="Competências"/>
+							<MultiComboBox id="skills" items="{/Skills}">
+								<items>
+									<core:Item key="{Id}" text="{Name}" /> 
+								</items>
+							</MultiComboBox>
 						</f:content>
-					</f:SimpleForm>
-					<SearchField placeholder="{i18n>searchfield_placeholder}"/>
-					<List mode="Delete" growing="true" growingScrollToLoad="true" growingThreshold="10" delete="onDelete" 
-						items="{/Students}">
+					</f:SimpleForm> 
+					<SearchField placeholder="{i18n>searchfield_placeholder}" search="onSearch"/>
+					<List id="list" mode="Delete" growing="true" growingScrollToLoad="true" growingThreshold="10" delete="onDelete" 
+						items="{/Students}" itemPress="onItemPress">
 						<items>
-							<StandardListItem title="{FirstName}" description="{LastName}" icon="sap-icon://notes"/>
+							<StandardListItem type="Active" title="{FirstName} {LastName}" description="{UserName}" info="{path:'BirthDate',type:'sap.ui.model.type.Date'}"  icon="sap-icon://notes"/>
 						</items>
 					</List>
 				</content>
@@ -27,6 +37,9 @@
 						<contentRight>
 							<Button text="Inserir" type="Accept" icon="sap-icon://add" press="onCreate"/>
 						</contentRight>
+						<contentMiddle>
+							<Button text="Salvar" icon="sap-icon://save" press="onSave"/>
+						</contentMiddle>
 						<contentLeft>
 							<Button text="Atualizar" type="Emphasized" icon="sap-icon://edit" press="onEdit"/>
 						</contentLeft>

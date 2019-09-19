@@ -118,5 +118,9 @@
 	"sap.platform.abap": {
 		"uri": "/sap/bc/ui5_ui5/sap/zt37_79_ovlyapp/webapp",
 		"_version": "1.1.0"
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

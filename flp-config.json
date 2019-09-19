@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "cadastroalunos",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#Student-manage",
+        "navigationComponentName": "ovly.fiori_79.cadastroalunos",
+        "intentSemanticObject": "Student",
+        "intentAction": "manage",
+        "html5ApplicationName": "cadastroalunos",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "e0ada6fb-2079-4a7b-8924-4078b1fcf857-1568573194668"
+        ],
+        "contentPackages": [
+            "e27126c5-50f3-4fcd-8736-3eca13a88cdb-1568573022954"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "DynamicTile",
+        "title": "App da OVLY",
+        "subtitle": "Cadastro de Alunos",
+        "searchKeywords": "App da OVLY,Cadastro de Alunos",
+        "displayIconUrl": "sap-icon://soccor",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "/sap/fiori/cadastroalunos/sap/opu/odata/sap/ZT37_79_OVLY_APP_SRV/Students/$count",
+        "refreshInterval": 10,
+        "displayNumberUnit": "alunos"
+    }
+}
